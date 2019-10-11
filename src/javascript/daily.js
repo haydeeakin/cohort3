@@ -13,13 +13,13 @@
 // Function
 
 const myFunction = {
-    
+
     assertEquals: (num1, num2) => {
         if (num1 === num2) return true;
-            else {
-                console.log("the two values are not the same")};
+        console.log("the two values are not the same");
         return false;
     }
 };
 
 export default myFunction;
+
