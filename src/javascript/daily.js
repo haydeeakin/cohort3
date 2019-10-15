@@ -1,3 +1,6 @@
+
+// Daily Num 1 //
+
 /* Write the function that will create this output
 *** the two values are not the same:
     p1 --> a
@@ -21,5 +24,23 @@ const myFunction = {
     }
 };
 
-export default myFunction;
+  export default myFunction;
 
+
+// Daily Num 2 //
+
+/* Write a function that will receive an array.
+The first entree in the array is the first name,
+the second entree is the last name.
+The array only has one person in it.
+Create an evolveu email from the array.
+*/
+
+const myEmail = {
+    
+    makeEmailObj: () => {
+        return makeEmailObj["fname"] + makeEmailObj["lname"] + "@evolveu.ca"
+    }
+};
+  
+export default myEmail;
