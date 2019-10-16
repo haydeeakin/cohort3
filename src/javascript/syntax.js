@@ -74,8 +74,8 @@ const functions = {
     //Check if/else
     isIfElse: value => {
       if ((value >= 6) & (value <= 12)) {
-        return "end of yearsecond half of the year";
-      } else if ((value > 1) & (value < 6)) {
+        return "end of second half of the year";
+      } else if ((value >= 1) & (value < 6)) {
         return "first half of the year";
       } else {
         return "Not a month of the year";
@@ -92,9 +92,9 @@ const functions = {
     },
     //Check arrays add to the front
   
-    isAddFront: addVal => {
+    isAddFront: addFront => {
       const myArray = [100, 150, 200];
-      myArray.unshift(addVal);
+      myArray.unshift(addFront);
       return myArray;
     },
   
@@ -184,7 +184,7 @@ const functions = {
     //check lookup key to retrieve a value
     checkLookUpKey: key => {
       let result = "";
-      const person = { name: "TomAlex", age: 35 };
+      const person = { name: "Bob", age: 40 };
       result = person[key];
       return result;
       // return 0;
