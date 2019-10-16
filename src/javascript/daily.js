@@ -33,8 +33,14 @@ const functions = {
     },
 
 // Daily 2
-    makeEmailArr: (name) => {
-        return `${name[0].toLowerCase()}.${name[1].toLowerCase()}@evolveu.ca`;
+    makeEmailArr: (arr) => {
+        return `${arr[0].toLowerCase()}.${arr[1].toLowerCase()}@evolveu.ca`;
+    },
+
+// Daily 3
+    makeEmailObj: (obj) => {
+        let email = `${obj.fname.toLowerCase()}.${obj.lname.toLowerCase()}@evolve.ca`;
+        return email
     }
 
 };
