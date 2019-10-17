@@ -33,6 +33,10 @@
 //   }
 // };
 
+// for (initialization; condition; final expression) {
+    // code to be executed
+// }
+
 // Check if input is a number
 const functions = {
     //Check if input is a number

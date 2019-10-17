@@ -25,24 +25,44 @@ Create an evolveu email from the array.
 
 const functions = {
 
-// Daily 1
+    // Prepare for Array Work - October 15, 2019
+    forLoopToSort: (arr) => {
+        for (let i = 0; i < arr.length; i++){
+            for (let j = i; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            };
+            
+        };
+        return arr;
+    },
+
+    whileLoop: (arr) => {
+        
+    }
+
+    // makeEmailObj - Oct 11, 2019
+    makeEmailObj: (obj) => {
+        return `${obj.fname.toLowerCase()}.${obj.lname.toLowerCase()}@evolveu.ca`;
+
+    },
+
+    // makeEmailArr - October 9, 2019
+    makeEmailArr: (arr) => {
+        return `${arr[0].toLowerCase()}.${arr[1].toLowerCase()}@evolveu.ca`;
+    },
+
+    // assertEquals - October 7, 2019
     assertEquals: (num1, num2) => {
         if (num1 === num2) return true;
         console.log("the two values are not the same");
         return false;
     },
 
-// Daily 2
-    makeEmailArr: (arr) => {
-        return `${arr[0].toLowerCase()}.${arr[1].toLowerCase()}@evolveu.ca`;
-    },
-
-// Daily 3
-    makeEmailObj: (obj) => {
-        let email = `${obj.fname.toLowerCase()}.${obj.lname.toLowerCase()}@evolve.ca`;
-        return email
-    }
-
 };
-export default functions 
+
+export default functions
 
