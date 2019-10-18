@@ -31,7 +31,7 @@ const functions = {
         return arr1;
     },
 
-    // Do while
+    // Do while loop
     makeDoWhile: (arr) => {
         var arr1 = [];
         var i = 0;
@@ -44,7 +44,7 @@ const functions = {
         return arr1;
     },
 
-    // For in
+    // For in loop
     makeForIn: (obj) => {
         var obj1 = [];
         var i = 0;
@@ -55,6 +55,16 @@ const functions = {
         return obj1
     },
 
+    // For of loop
+    makeForOf: (iterable) => {
+        var itr1 = [];
+        var i = 0;
+        for (const value of iterable) {
+            itr1[i] = value += 1;
+            i++;
+        }
+        return itr1
+    },
 
     // makeEmailObj - Oct 11, 2019
     makeEmailObj: (obj) => {
