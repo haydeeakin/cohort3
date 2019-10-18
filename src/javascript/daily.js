@@ -1,26 +1,4 @@
 
-// Daily 1 //
-
-/* Write the function that will create this output
-*** the two values are not the same:
-    p1 --> a
-    p2 --> b
-*** the two values are not the same:
-    p1 --> 1
-    p2 --> 2
-*** the two values are not the same:
-    p1 --> 2
-    p2 --> 2
-*/
-
-// Daily 2 //
-
-/* Write a function that will receive an array.
-The first entree in the array is the first name,
-the second entree is the last name.
-The array only has one person in it.
-Create an evolveu email from the array.
-*/
 
 
 const functions = {
@@ -52,6 +30,20 @@ const functions = {
             };
         return arr1;
     },
+
+    // Do while
+    makeDoWhile: (arr) => {
+        var i = 0;
+        var arri = [];
+        do {
+            let temp = "This is " + arr1[i];
+            arr1[i] = temp;
+            i++;
+        }
+        while (i < arr.length);
+        return arr1;
+    },
+
 
     // makeEmailObj - Oct 11, 2019
     makeEmailObj: (obj) => {

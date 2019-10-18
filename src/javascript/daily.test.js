@@ -9,13 +9,19 @@ import functions from './daily.js'
 test('sorting array using for loop', () => {
     const data = [77, 47, 67, 7, 27, 17]
     expect(functions.forLoopToSort(data)).toEqual([77, 67, 47, 27, 17, 7]);
-  });
+});
 
 test('print new array using while loop', () => {
     const data = [11, 33, 44]
     expect(functions.makeWhileLoop(data)).toEqual(["This is 11", "This is 33", "This is 44"]);
 });
 
+test('print new array using while do loop', () => {
+    const data = [11, 33, 44]
+    expect(functions.makeWhileLoop(data)).toEqual(["This is 11", "This is 33", "This is 44"]);
+});
+
+// test - makeEmailObj - Oct 11, 2019
 test('email builder from an object / map', () => {
     const name = { fname: 'first', lname: 'last' };
     expect(functions.makeEmailObj(name))
@@ -27,7 +33,6 @@ test('email builder from an object / map', () => {
 });
 
 // test - makeEmailArr - October 9, 2019
-
 test('email builder from an array', () => {
     const name = ["first", "last"];
     expect(functions.makeEmailArr(name))
@@ -39,7 +44,6 @@ test('email builder from an array', () => {
 });
 
 // test - assertEquals - October 7, 2019
-
 test('Compare numbers', () => {
     expect(functions.assertEquals("a","b")).toBe(false);
     expect(functions.assertEquals("a","a")).toBe(true);
