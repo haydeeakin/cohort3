@@ -3,6 +3,37 @@
 
 const functions = {
 
+    // More array work - 16-17 October, 2019
+    // Slice
+    useSlice: (obj) => {
+        var arr = [];
+        var i = 0;
+        arr = obj.slice(-3, -1);
+        i++;
+        return arr;
+    },
+
+    // Splice
+    useSplice: (obj) => {
+        var arr = [];
+        var i = 0;
+        arr = obj.splice(2, 2);
+        i++;
+        return arr;
+    },
+
+    // forEach
+    useForEach: (obj) =>{
+        var arr =[];
+        var i = 0;
+        arr = obj.forEach(fun);
+        function fun(item, index) {
+
+        }
+    }
+
+
+
     // Prepare for Array Work - October 15, 2019
     // For loop
     forLoopToSort: (arr) => {

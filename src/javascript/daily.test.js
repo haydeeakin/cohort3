@@ -1,11 +1,21 @@
 
 
-// Daily test 1 //
-
 import functions from './daily.js'
 
-// test - Prepare for Array Work - October 15, 2019
+// test - More array work Oct 16 - 17
+// Slice
+test('use slice to extract elements', () => {
+    const data = ["milk", "bread", "tomatoes", "cheese", "lettuce"];
+    expect(functions.useSlice(data)).toEqual(["tomatoes", "cheese"]);
+}),
 
+// Splice
+test('use splice to extract elements', () => {
+    const data = ["milk", "bread", "tomatoes", "cheese", "lettuce"];
+    expect(functions.useSplice(data)).toEqual(["tomatoes", "cheese"]);
+}),
+
+// test - Prepare for Array Work - October 15, 2019
 test('sorting array using for loop', () => {
     const data = [77, 47, 67, 7, 27, 17];
     expect(functions.forLoopToSort(data)).toEqual([77, 67, 47, 27, 17, 7]);
