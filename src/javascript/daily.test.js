@@ -18,7 +18,12 @@ test('print new array using while loop', () => {
 
 test('print new array using while do loop', () => {
     const data = [11, 33, 44]
-    expect(functions.makeWhileLoop(data)).toEqual(["This is 11", "This is 33", "This is 44"]);
+    expect(functions.makeDoWhile(data)).toEqual(["This is 11", "This is 33", "This is 44"]);
+});
+
+test('example using for in loop', () => {
+    const data = {height: "170", weight: "65", age: "30"};
+    expect(functions.makeForIn(data)).toEqual(["obj.height = 170", "obj.weight = 65", "obj.age = 30"]);
 });
 
 // test - makeEmailObj - Oct 11, 2019

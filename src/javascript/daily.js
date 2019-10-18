@@ -33,15 +33,26 @@ const functions = {
 
     // Do while
     makeDoWhile: (arr) => {
+        var arr1 = [];
         var i = 0;
-        var arri = [];
         do {
-            let temp = "This is " + arr1[i];
+            let temp = "This is " + arr[i];
             arr1[i] = temp;
             i++;
         }
         while (i < arr.length);
         return arr1;
+    },
+
+    // For in
+    makeForIn: (obj) => {
+        var obj1 = [];
+        var i = 0;
+        for (const prop in obj) {
+            obj1[i] = `obj.${prop} = ${obj[prop]}`;
+            i++;
+        }
+        return obj1
     },
 
 
