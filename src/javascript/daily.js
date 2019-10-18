@@ -26,6 +26,7 @@ Create an evolveu email from the array.
 const functions = {
 
     // Prepare for Array Work - October 15, 2019
+    // For loop
     forLoopToSort: (arr) => {
         for (let i = 0; i < arr.length; i++){
             for (let j = i; j < arr.length; j++) {
@@ -40,9 +41,17 @@ const functions = {
         return arr;
     },
 
-    whileLoop: (arr) => {
-        
-    }
+    // While loop
+    makeWhileLoop: (arr) => {
+        var i = 0;
+        var arr1 = [];
+        while (i < arr.length) {
+            let temp = "This is " + arr[i];
+            arr1[i] = temp;
+            i++;
+            };
+        return arr1;
+    },
 
     // makeEmailObj - Oct 11, 2019
     makeEmailObj: (obj) => {

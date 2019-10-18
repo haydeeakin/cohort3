@@ -11,6 +11,11 @@ test('sorting array using for loop', () => {
     expect(functions.forLoopToSort(data)).toEqual([77, 67, 47, 27, 17, 7]);
   });
 
+test('print new array using while loop', () => {
+    const data = [11, 33, 44]
+    expect(functions.makeWhileLoop(data)).toEqual(["This is 11", "This is 33", "This is 44"]);
+});
+
 test('email builder from an object / map', () => {
     const name = { fname: 'first', lname: 'last' };
     expect(functions.makeEmailObj(name))
