@@ -1,0 +1,13 @@
+#body {
+    background: lightgray;
+}
+
+#basic {
+    border:solid ;
+    text-align: center;
+    grid-column: auto;
+    list-style-position: inside;
+    width: 400px;
+    margin: auto;
+    background: white;
+}
