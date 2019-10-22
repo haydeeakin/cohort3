@@ -6,7 +6,7 @@ basic.addEventListener("click", () => {
 });
 
 show.addEventListener("click", functions.thekids);
-
+add.addEventListener("click", functions.newli);
 
 
 
