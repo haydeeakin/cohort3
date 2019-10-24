@@ -1,7 +1,22 @@
 
 
 
+
+
 const functions = {
+    
+    // loopStaff - October 22, 2019
+    loopStaff: (emailArray) => {
+       var staffEmail = [];
+        for (let item of emailArray){
+            let newEmail = functions.makeEmailObj(item)
+            staffEmail.push(newEmail);
+        }
+  
+        return staffEmail;
+    },
+    
+
 
     // More array work - 16-17 October, 2019
     // Slice
@@ -23,15 +38,25 @@ const functions = {
     },
 
     // forEach
-    useForEach: (obj) =>{
-        var arr =[];
-        var i = 0;
-        arr = obj.forEach(fun);
-        function fun(item, index) {
+    // useForEach: (input) =>{
+    //     var 
 
-        }
-    }
 
+        
+        // var arr =[];
+        // var i = 0;
+        // arr = obj.forEach(fun);
+        // function fun(item, index) {
+
+    //     }
+    // }
+
+
+    // Map
+    // useMap: () => {
+
+        
+    // },
 
 
     // Prepare for Array Work - October 15, 2019

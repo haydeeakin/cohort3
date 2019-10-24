@@ -2,18 +2,44 @@
 
 import functions from './daily.js'
 
+// test loopStaff - October 22, 2019
+const data = {
+    staff: [
+        { fname: "Jane", lname: "Smith", balance: 10 },
+        { fname: "Liam", lname: "Henry", balance: 1000 },
+        { fname: "Emma", lname: "Jones", balance: 1330 },
+        { fname: "Olivia", lname: "Notly", balance: 310 },
+        { fname: "Noah", lname: "Ho", balance: 503 },
+        { fname: "William", lname: "Lee", balance: 520 },
+        { fname: "Benjamin", lname: "Amis", balance: 150 },
+    ],
+    company: "EvolveU",
+    city: "Calgary",
+    prov: "Alberta"
+};
+
+test('email builder for company', () => {
+    const staffEmail = functions.loopStaff(data.staff);
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[3])
+        .toEqual("olivia.notly@evolveu.ca");
+    expect(staffEmail[6])
+        .toEqual("benjamin.amis@evolveu.ca");
+});
+
 // test - More array work Oct 16 - 17
 // Slice
 test('use slice to extract elements', () => {
     const data = ["milk", "bread", "tomatoes", "cheese", "lettuce"];
     expect(functions.useSlice(data)).toEqual(["tomatoes", "cheese"]);
-}),
+});
 
 // Splice
 test('use splice to extract elements', () => {
     const data = ["milk", "bread", "tomatoes", "cheese", "lettuce"];
     expect(functions.useSplice(data)).toEqual(["tomatoes", "cheese"]);
-}),
+});
 
 // test - Prepare for Array Work - October 15, 2019
 test('sorting array using for loop', () => {
