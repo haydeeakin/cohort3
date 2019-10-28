@@ -4,7 +4,42 @@
 
 
 const functions = {
-    
+    // loopStaff forEach / map - October 25, 2019
+    // loopStaff forEach
+    loopStaffForEach: (obj) => {
+
+    },
+
+    // loopStaff map
+    loopStaffMap: (obj) => {
+
+    },
+
+    // loopStaff: in/of - October 24, 2019
+    // For in loop
+    loopStaffIn: (obj) => {
+        var obj1 = [];
+        var i = 0;
+        for (const prop in obj) {
+            obj1[i] = `${obj.prop.toLowerCase()}.${obj.prop.toLowerCase()}@evolveu.ca`;
+            // `obj.${prop} = ${obj[prop]}`;
+            i++;
+        }
+        return obj1
+    },
+
+    // For of loop
+    loopStaffOf: (iterable) => {
+        var itr1 = [];
+        var i = 0;
+        for (const value of iterable) {
+            itr1[i] = value += 1;
+            itr1[i] = `${iterable.value.toLowerCase()}.${iterable.value.toLowerCase()}@evolveu.ca`;
+            i++;
+        }
+        return itr1
+    },
+
     // loopStaff - October 22, 2019
     loopStaff: (emailArray) => {
        var staffEmail = [];
