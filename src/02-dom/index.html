@@ -1,13 +1,16 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
+        <title>Comp 110</title>
+        <h1>DOM exercise</h1>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css" href="./index.css">
-        <title>Basic DOM</title>
+        <title>DOM Exercise</title>
     </head>
-    <body>
+    <body id="body">
+        <!-- Basic DOM -->
         <div id="basic">
             <h1>Basic DOM</h1>
             <p>This is a list of stuff</p>
@@ -19,6 +22,25 @@
             <button id="show" name = "button">Show</button>
             <button id="add" name = "button">Add</button>
         </div>
+        <!-- Working with cards -->
+        </div id= "main-col-container" class= "col-container">
+            <div id="left" class= "column">
+                <h2>Left Side</h2>
+                <div id= "maincard" class= "card">
+                    <button id= "addcard">Add Card</button>
+                </div>
+            </div>
+            <div id="right" class= "column">
+                <h2>Right Side</h2>
+            </div>
+    
+        </div>
+
+
+
+
+
+
         <script type="module" src="./scripts/index.js"></script>
     </body>
         

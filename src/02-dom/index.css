@@ -11,3 +11,42 @@
     margin: auto;
     background: white;
 }
+
+#col-container {
+    display: table;
+}
+
+#left {
+    float: left;
+    width: 40%;
+    padding: 20px;
+    height: 500px;
+    margin-left: auto;
+}
+
+#right {
+    float: right;
+    width: 40%;
+    padding: 20px;
+    height: 500px;
+    margin-left: auto;
+}
+
+.column {
+    border:solid ;
+    text-align: center;
+    grid-column: auto;
+    list-style-position: inside;
+    width: 400px;
+    margin: auto;
+    background: white;
+}
+
+.card {
+    text-align: center;
+    grid-column: center;
+    list-style-position: inside;
+    width: 200px;
+    margin: auto;
+    background: rgb(202, 200, 200);
+}
