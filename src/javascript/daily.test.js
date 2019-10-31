@@ -2,6 +2,9 @@
 
 import functions from './daily.js'
 
+
+
+
 // test loopStaff - October 22, 2019
 const data = {
     staff: [
@@ -18,6 +21,55 @@ const data = {
     prov: "Alberta"
 };
 
+// test loopStaff each / map - October 25, 2019
+// loopStaff for Each
+test('loopStaff using forEach', () => {
+    const staffEmail = functions.loopStaffForEach(data.staff);
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[3])
+        .toEqual("olivia.notly@evolveu.ca");
+    expect(staffEmail[6])
+        .toEqual("benjamin.amis@evolveu.ca");
+});
+
+// loopStaff Map
+test('loopStaff using Map', () => {
+    const staffEmail = functions.loopStaffMap(data.staff);
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[3])
+        .toEqual("olivia.notly@evolveu.ca");
+    expect(staffEmail[6])
+        .toEqual("benjamin.amis@evolveu.ca");
+});
+
+
+// test loofStaff: in/of - October 24, 2019
+// loopStaffIn
+test('email builder using for in', () => {
+    const staffEmail = functions.loopStaffIn(data.staff);
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[3])
+        .toEqual("olivia.notly@evolveu.ca");
+    expect(staffEmail[6])
+        .toEqual("benjamin.amis@evolveu.ca");
+});
+
+// loopStaffOf
+test('email builder using for of', () => {
+    const staffEmail = functions.loopStaffOf(data.staff);
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[3])
+        .toEqual("olivia.notly@evolveu.ca");
+    expect(staffEmail[6])
+        .toEqual("benjamin.amis@evolveu.ca");
+});
+// write test here
+
+// test loopStaff - October 22, 2019 (this test uses the const "data")
 test('email builder for company', () => {
     const staffEmail = functions.loopStaff(data.staff);
     expect(staffEmail[0])
@@ -39,6 +91,18 @@ test('use slice to extract elements', () => {
 test('use splice to extract elements', () => {
     const data = ["milk", "bread", "tomatoes", "cheese", "lettuce"];
     expect(functions.useSplice(data)).toEqual(["tomatoes", "cheese"]);
+});
+
+// forEach
+test('use forEach to double each number of input array', () => {
+    const data = [4, 7, 10, 22];
+    expect(functions.useForEach(data)).toEqual([8, 14, 20, 44]);
+});
+
+// Map
+test('use Map to double each number of input array', () => {
+    const data = [4, 7, 10, 22];
+    expect(functions.useMap(data)).toEqual([8, 14, 20, 44]);
 });
 
 // test - Prepare for Array Work - October 15, 2019

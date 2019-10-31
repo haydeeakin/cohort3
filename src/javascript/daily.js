@@ -4,40 +4,42 @@
 
 
 const functions = {
+    
     // loopStaff forEach / map - October 25, 2019
     // loopStaff forEach
     loopStaffForEach: (obj) => {
-
+        let email = [];
+        obj.forEach((prop) => {
+            email.push(functions.makeEmailObj(prop));
+        });
+        return email;
     },
 
     // loopStaff map
     loopStaffMap: (obj) => {
-
+        const email = obj.map((prop) => {
+            return functions.makeEmailObj(prop);
+        });
+        return email;
     },
 
-    // loopStaff: in/of - October 24, 2019
-    // For in loop
+    // // loopStaff: in/of - October 24, 2019
+    // // For in loop
     loopStaffIn: (obj) => {
-        var obj1 = [];
-        var i = 0;
-        for (const prop in obj) {
-            obj1[i] = `${obj.prop.toLowerCase()}.${obj.prop.toLowerCase()}@evolveu.ca`;
-            // `obj.${prop} = ${obj[prop]}`;
-            i++;
+        let email = [];
+        for (const i in obj) {
+            email.push(functions.makeEmailObj(obj[i]));
         }
-        return obj1
+        return email
     },
 
     // For of loop
-    loopStaffOf: (iterable) => {
-        var itr1 = [];
-        var i = 0;
-        for (const value of iterable) {
-            itr1[i] = value += 1;
-            itr1[i] = `${iterable.value.toLowerCase()}.${iterable.value.toLowerCase()}@evolveu.ca`;
-            i++;
+    loopStaffOf: (obj) => {
+        let newArray = [];
+        for (const prop of obj) {
+            newArray.push(functions.makeEmailObj(prop));
         }
-        return itr1
+        return newArray
     },
 
     // loopStaff - October 22, 2019
@@ -51,7 +53,6 @@ const functions = {
         return staffEmail;
     },
     
-
 
     // More array work - 16-17 October, 2019
     // Slice
@@ -73,25 +74,21 @@ const functions = {
     },
 
     // forEach
-    // useForEach: (input) =>{
-    //     var 
-
-
-        
-        // var arr =[];
-        // var i = 0;
-        // arr = obj.forEach(fun);
-        // function fun(item, index) {
-
-    //     }
-    // }
-
+    useForEach: (input) => {
+        const double = [];
+        input.forEach((num) => {
+            double.push(num * 2);
+        });
+        return double;
+    },
 
     // Map
-    // useMap: () => {
-
-        
-    // },
+    useMap: (array) => {
+        const mapArray = array.map((num) => {
+            return num * 2;
+        });
+        return mapArray;
+    },
 
 
     // Prepare for Array Work - October 15, 2019
