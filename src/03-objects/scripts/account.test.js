@@ -1,4 +1,5 @@
-import Account from "./account.js";
+import { Account, AccountController } from "./account.js";
+// import Account from "./account.js";
 
 test("checking account works", () => {
     const savingsAccount = new Account("Alex", 30);
@@ -8,4 +9,10 @@ test("checking account works", () => {
     expect(savingsAccount.balance()).toBe((10));
 });
 
+test("checking create account", () => {
+    const newController = new AccountController();
+    newController.createAccount("savings", 200);
+    expect(newController.allAccounts[0].name).toBe(("savings"));
+    expect(newController.allAccounts[0].currentBalance).toBe((200));
+});
 

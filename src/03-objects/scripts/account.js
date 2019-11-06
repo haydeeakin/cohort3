@@ -17,8 +17,22 @@ class Account {
     }
 
     balance(amount) {
-        return this.currentBalance
+        return this.currentBalance;
     }
 };
 
-export default Account
+class AccountController {
+    constructor() {
+        this.allAccounts = [];
+    }
+
+    createAccount(name, currentBalance) {
+        let newAccount = new Account(name, currentBalance);
+        this.allAccounts.push(newAccount);
+    }
+
+    
+};
+
+// export default Account;
+export { Account, AccountController };
