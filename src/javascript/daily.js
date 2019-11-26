@@ -3,8 +3,58 @@
 
 
 
+// Destructuring-assignment - November 26, 2019
+class AccountController {
+    constructor() {
+        this.allAccounts = [];
+    }
+    //Here I demonstrate a way to destructrue (not a very eficient solution,
+    // for this case but just to demo the concept)
+    createAccount(accountName, currentBalance) {
+        let newAccount = new Account(accountName, currentBalance);
+        // this.allAccounts.push(newAccount);
+        this.allAccounts = [...this.allAccounts, newAccount];
+    }
+
+    removeAccount(accountName) {
+        this.allAccounts = this.allAccounts.filter((item) => item.accountName != accountName);
+    }
+    
+    totalBalance() {
+        return this.allAccounts.reduce((acc, item ) => acc + item.currentBalance, 0);
+    }
+
+    lowestBalance() {
+        this.allAccounts.sort((a, b) => a.currentBalance - b.currentBalance);
+        return this.allAccounts[0];
+    }
+
+    highestBalance() {
+        this.allAccounts.sort((a, b) => b.currentBalance - a.currentBalance);
+        return this.allAccounts[0];
+    }
+};
+
+
+
 const functions = {
     
+    // More Array Exercises - October 29, 2019
+    // Find balance
+    findTotalBalance: (item) => {
+        let total = item.reduce((acc, curr) => acc + curr.balance, 0);
+        return total
+        
+    },
+
+    findAverage: (item) => {
+        let totalBal = functions.findTotalBalance(item);
+        let aver = totalBal / item.length;
+        return Number(aver.toFixed(2));
+    },
+
+
+
     // loopStaff forEach / map - October 25, 2019
     // loopStaff forEach
     loopStaffForEach: (obj) => {
@@ -17,9 +67,7 @@ const functions = {
 
     // loopStaff map
     loopStaffMap: (obj) => {
-        const email = obj.map((prop) => {
-            return functions.makeEmailObj(prop);
-        });
+        const email = obj.map(prop => functions.makeEmailObj(prop));
         return email;
     },
 
@@ -90,6 +138,25 @@ const functions = {
         return mapArray;
     },
 
+    // Reduce
+    useReduce: (array) => {
+        const reduceArray = array.reduce((acc, cur) => acc + cur);
+        return reduceArray;
+    },
+
+    // Filter
+    useFilter: (array) => {
+        // const filteredNum = array.filter();
+        const filteredNum = array.filter(num => (num > 19 && num <60));
+        return filteredNum;
+
+    },
+
+    // Sort
+    useSort: (array) => {
+        const sortedDesc = array.sort((a, b) => (b-a));
+        return sortedDesc;
+    },
 
     // Prepare for Array Work - October 15, 2019
     // For loop
