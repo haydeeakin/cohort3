@@ -1,7 +1,7 @@
 class Account {
 
-    constructor(name, initialBalance) {
-        this.name = name;
+    constructor(accountName, initialBalance) {
+        this.accountName = accountName;
         this.currentBalance = initialBalance;
     }
 
@@ -26,12 +26,28 @@ class AccountController {
         this.allAccounts = [];
     }
 
-    createAccount(name, currentBalance) {
-        let newAccount = new Account(name, currentBalance);
+    createAccount(accountName, currentBalance) {
+        let newAccount = new Account(accountName, currentBalance);
         this.allAccounts.push(newAccount);
     }
 
+    removeAccount(accountName) {
+        this.allAccounts = this.allAccounts.filter((item) => item.accountName != accountName);
+    }
     
+    totalBalance() {
+        return this.allAccounts.reduce((acc, item ) => acc + item.currentBalance, 0);
+    }
+
+    lowestBalance() {
+        this.allAccounts.sort((a, b) => a.currentBalance - b.currentBalance);
+        return this.allAccounts[0];
+    }
+
+    highestBalance() {
+        this.allAccounts.sort((a, b) => b.currentBalance - a.currentBalance);
+        return this.allAccounts[0];
+    }
 };
 
 // export default Account;
