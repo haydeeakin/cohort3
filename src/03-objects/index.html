@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href= "https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" type= "text/css" href="./index.css" />
     <title>Account Comp 130</title>
 </head>
 <body>
-    <h1>Account Information</h1>
-    <div id= "container" class= "w3-container">
-            <div class="w3-panel w3-card"><p>w3-card</p></div>
+    <div class="divider">
+        <div class="divider-div">
+            <span class="divider-text">Accounts</span>
+        </div>
     </div>
-    
+    <!-- Begining of Accounts, competency 130 -->
+    <div class="card-container">
+        <h1>Personal Banking</h1>
+        <div class="left-panel">
+            <h2><b>What would you like to do today?</b></h2>
+            <button id= "add-acc">Add new account</button><br/>
+            <br/>
+            <label for="accounts" class="hidden">Select account:</label>
+            <select name="accounts" class="hidden" id="accounts"></select>
+            <button id="del-acc" class="hidden">Delect account</button><br/>
+            <br/>
+            <button id="total-bal" class= "total-bal hidden">Total accounts balance</button>
+            <button id="highest-acc" class= "highest-acc hidden">Highest balance</button>
+            <button id= "lowest-acc" class= "lowest-acc hidden">Lowest balance</button><br/>
+        </div>
+        <div class= "right-panel"></div>
+    </div>
+    <script type="module" src="./index.js"></script>
 </body>
 </html>

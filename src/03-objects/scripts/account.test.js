@@ -1,4 +1,5 @@
 import { Account, AccountController } from "./account.js";
+import {functions} from "./functions.js"
 // import Account from "./account.js";
 
 test("checking account works", () => {
@@ -18,10 +19,10 @@ test("checking account controler", () => {
     newClient.createAccount("checking", 1000);
     expect(newClient.allAccounts.length).toBe(2);
     expect(newClient.totalBalance()).toEqual(1200);
-    // newClient.removeAccount("checking");
-    // expect(newClient.allAccounts.length).toBe(1);
-    // expect(newClient.totalBalance()).toEqual(200);
     expect(newClient.lowestBalance()).toEqual({"accountName": "savings", "currentBalance": 200});
     expect(newClient.highestBalance()).toEqual({"accountName": "checking", "currentBalance": 1000});
+    newClient.removeAccount("checking");
+    expect(newClient.allAccounts.length).toBe(1);
+    expect(newClient.totalBalance()).toEqual(200);
 });
 

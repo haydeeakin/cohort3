@@ -29,6 +29,11 @@ class AccountController {
     createAccount(accountName, currentBalance) {
         let newAccount = new Account(accountName, currentBalance);
         this.allAccounts.push(newAccount);
+        return newAccount;
+    }
+
+    checkAccounts() {
+        return this.allAccounts;
     }
 
     removeAccount(accountName) {
@@ -50,5 +55,5 @@ class AccountController {
     }
 };
 
-// export default Account;
+
 export { Account, AccountController };

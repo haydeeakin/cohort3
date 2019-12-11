@@ -1,7 +1,76 @@
-.w3-panel {
-    
+body,
+html {
+  height: 100%;
+  margin: 0;
 }
 
-.w3-card {
+.card-container {
+    align-content: center;
+    column-gap: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin: 3%;
+}
+
+.card {
+  align-content: center;
+  display: grid;
+  gap: 2%;
+  grid-template-columns: 20% 20%;
+  justify-content: center;
+  margin-top: 3%;
+  row-gap: 10%;
 
 }
+
+h1 {
+  text-align: center;
+}
+
+.divider {
+  background-image: url(https://unsplash.com/photos/ineC_oi7NHs);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+
+  min-height: fit-content;
+  position: relative;
+}
+
+.divider-div {
+  left: 40%;
+  mix-blend-mode: difference;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.divider-text {
+  color: burlywood;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: capitalize;
+
+}
+
+.left-panel {
+  background-color: bisque;
+  max-height: 600px;
+  overflow: auto;
+  text-align: center;
+  justify-self: center;
+}
+
+.right-panel {
+  background-color: bisque;
+  display: grid;
+  grid-template-columns: 70%;
+  justify-content: center;
+  max-height: 600px;
+  max-width: 600px;
+  overflow: auto;
+  text-align: center;
+}
+
+
