@@ -7,7 +7,7 @@ class City {
     };
 
     show() {
-        return `Name: ${this.name}/nLatitude: ${this.latitude}/nLongitude: ${this.longitude}/nPopulation: ${this.population}`;
+        return `Name: ${this.name} Latitude: ${this.latitude} Longitude: ${this.longitude} Population: ${this.population}`;
     }
 
     moveIn(num) {
@@ -27,8 +27,9 @@ class City {
     }
 
     whichHemisphere() {
-        if (this.latitude <= 0) return "Southern Hemisphere";
-        if (this.latitude > 0) return "Northern Hemispehre";
+        if (this.latitude < 0) return "Southern Hemisphere";
+        if (this.latitude > 0) return "Northern Hemisphere";
+        if (this.latitude = 0) return "Equator";
     }
 };
 
@@ -39,3 +40,5 @@ class Community {
 
     createCity()
 }
+
+export { City };
