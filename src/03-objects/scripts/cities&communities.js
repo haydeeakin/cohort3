@@ -29,16 +29,46 @@ class City {
     whichHemisphere() {
         if (this.latitude < 0) return "Southern Hemisphere";
         if (this.latitude > 0) return "Northern Hemisphere";
-        if (this.latitude = 0) return "Equator";
+        if (this.latitude === 0) return "Equator";
     }
 };
 
 class Community {
     constructor() {
-        this.cities = [];
+        this.allCities = [];
     }
 
-    createCity()
+    createCity(name, latitude, longitude, population) {
+        let newCity = new City(name, latitude, longitude, population);
+        this.allCities.push(newCity);
+        return newCity;
+    }
+
+    deleteCity(name) {
+        this.allCities = this.allCities.filter((item) => item.name != name);
+    }
+
+    getTotalPop() {
+        return this.allCities.reduce((acc, item ) => acc + item.population, 0);
+    }
+
+    highestPop() {
+        this.allCities.sort((a, b) => b.population - a.population);
+        return this.allCities[0].name;
+
+    }
+
+    mostSouthern() {
+        this.allCities.sort((a, b) => a.latitude - b.latitude);
+        return this.allCities[0].name;
+        
+
+    }
+
+    mostNorthern() {
+        this.allCities.sort((a, b) => b.latitude - a.latitude);
+        return this.allCities[0].name;
+    }
 }
 
-export { City };
+export { City, Community };
